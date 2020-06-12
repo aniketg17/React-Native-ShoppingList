@@ -45,7 +45,7 @@ const App = () => {
     editItemDetailChange({id: editItemDetail.id, text});
   };
 
-  const addItem = text => {
+  function addItem(text) {
     if (!text) {
       Alert.alert(
         'No item entered',
@@ -63,7 +63,7 @@ const App = () => {
         return [{id: uuid(), text}, ...prevItems];
       });
     }
-  };
+  }
 
   // capture old items ID and text when user clicks edit
   const editItem = (id, text) => {
